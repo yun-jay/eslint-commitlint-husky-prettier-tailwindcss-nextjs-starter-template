@@ -32,3 +32,42 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Installation for existing projects
+
+First, run the following command:
+
+```bash
+yarn add -D @commitlint/cli @commitlint/config-conventional eslint eslint-config-next  eslint-config-prettier eslint-plugin-jsx-a11y eslint-plugin-prefer-arrow-functions eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-prefer-function-component prettier husky prettier-plugin-tailwindcss
+```
+
+Add the following files to the existing project:
+
+```
+.eslintignore
+.eslintrc
+.prettierignore
+.prettierrc
+commitlint.config.js
+jsconfig.json
+```
+
+Add the following folders to the existing project:
+
+```
+.husky
+```
+
+Add the following commands to your package.json scripts:
+
+```json
+...
+"scripts": {
+    "prepare": "husky install",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+...
+```
