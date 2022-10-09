@@ -10,7 +10,7 @@ Add the following files to the existing project:
 
 ```
 .eslintignore
-.eslintrc
+.eslintrc.js
 .prettierignore
 .prettierrc
 commitlint.config.js
